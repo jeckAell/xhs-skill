@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 60 python3 xhs_publisher.py)",
+      "Bash(apt-get install:*)",
+      "Bash(timeout 60 xvfb-run -a python3 xhs_publisher.py)",
+      "Bash(timeout 30 xvfb-run -a python3 xhs_publisher.py)",
+      "Bash(DISPLAY=:0 timeout 180 python3 xhs_publisher.py --topic \"咖啡探店分享\" --mode 长文 2>&1)",
+      "Bash(DISPLAY=:0 timeout 300 python3 xhs_publisher.py --topic \"咖啡探店分享\" --mode 长文 2>&1)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_login_and_save.py 2>&1)",
+      "Bash(mkdir -p ~/.xhs-skill/chromium-profile)",
+      "Bash(DISPLAY=:0 timeout 180 python3 xhs_system_chrome.py)",
+      "Bash(pkill -f chromium)",
+      "Bash(rm -rf ~/.xhs-skill/chromium-profile/Singleton*)",
+      "Read(//home/lei/snap/chromium/common/**)",
+      "Read(//home/lei/snap/**)",
+      "Bash(pkill -9 -f chromium)",
+      "Bash(rm -rf ~/.xhs-skill/creator-browser/Singleton*)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_login_once.py)",
+      "Bash(rm -rf ~/.xhs-skill/creator-browser)",
+      "Bash(DISPLAY=:0 python3 xhs_login_once.py)",
+      "Bash(find ~/.xhs-skill -name \"Singleton*\" -delete)",
+      "Bash(killall -9 chromium-browser)",
+      "Bash(killall -9 chrome)",
+      "Bash(DISPLAY=:0 timeout 600 python3 xhs_publisher.py --topic \"咖啡探店\" 2>&1)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_save_cookies.py 2>&1)",
+      "Bash(python3:*)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_publisher.py --topic \"咖啡探店\" 2>&1)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_simple.py 2>&1)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_publisher.py \"咖啡探店\" 2>&1)",
+      "Bash(ls:*)",
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_login.py 2>&1)"
+    ]
+  }
+}
