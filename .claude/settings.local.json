@@ -29,7 +29,8 @@
       "Bash(DISPLAY=:0 timeout 400 python3 xhs_simple.py 2>&1)",
       "Bash(DISPLAY=:0 timeout 400 python3 xhs_publisher.py \"咖啡探店\" 2>&1)",
       "Bash(ls:*)",
-      "Bash(DISPLAY=:0 timeout 400 python3 xhs_login.py 2>&1)"
+      "Bash(DISPLAY=:0 timeout 400 python3 xhs_login.py 2>&1)",
+      "Bash(xvfb-run:*)"
     ]
   }
 }
